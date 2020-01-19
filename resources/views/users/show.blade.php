@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Users') }}</div>
                     <div class="card-body">
                         <p><strong>Nombre:</strong> {{ $user->name }} </p>
-                        <p><strong>Email:</strong> {{ $user->email }} </p>
+                        <p><strong>Usuario:</strong> {{ $user->username }} </p>
                     </div>
                 </div>
             </div>

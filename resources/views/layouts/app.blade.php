@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 @auth
-                <a class="navbar-brand" href="{{ url('/index') }}">
+                <a class="navbar-brand" href="#">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 @endauth
@@ -58,12 +58,12 @@
                         @endcan
                             @can ('users.index')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users') }}</a>
+                                    <a class="nav-link" href="{{ route('users.index') }}">Estudiantes</a>
                                 </li>
                             @endcan
                             @can ('roles.index')
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('roles.index') }}">{{ __('Roles') }}</a>
+                                    <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
                                 </li>
                             @endcan
                     </ul>
@@ -103,8 +103,18 @@
                 </div>
             </div>
         </nav>
-
         <main class="py-4">
+            @if(session('info'))
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="alert alert-success">
+                                {{ session('info') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
             @yield('content')
         </main>
     </div>
