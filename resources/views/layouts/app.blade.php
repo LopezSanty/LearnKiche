@@ -36,20 +36,36 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        @auth
+                        @can('bimestreuno.bimuno')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('clients.index') }}">I Bimestre</a>
+                            <a class="nav-link" href="{{ route('bimestreuno.bimuno') }}">I Bimestre</a>
                         </li>
+                        @endcan
+                        @can('bimestredos.bimdos')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('clients.index') }}">II Bimestres</a>
+                            <a class="nav-link" href="{{ route('bimestredos.bimdos') }}">II Bimestres</a>
                         </li>
+                        @endcan
+                        @can('bimestretres.bimtres')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('clients.index') }}">III Bimestre</a>
+                            <a class="nav-link" href="{{ route('bimestretres.bimtres') }}">III Bimestre</a>
                         </li>
+                        @endcan
+                        @can('bimestrecuatro.bimcuatro')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('clients.index') }}">IV Bimestre</a>
+                            <a class="nav-link" href="{{ route('bimestrecuatro.bimcuatro') }}">IV Bimestre</a>
                         </li>
-                        @endauth
+                        @endcan
+                            @can ('users.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('users.index') }}">{{ __('Users') }}</a>
+                                </li>
+                            @endcan
+                            @can ('roles.index')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('roles.index') }}">{{ __('Roles') }}</a>
+                                </li>
+                            @endcan
                     </ul>
 
                     <!-- Right Side Of Navbar -->
