@@ -56,16 +56,21 @@
                             <a class="nav-link" href="{{ route('bimestrecuatro.bimcuatro') }}">IV Bimestre</a>
                         </li>
                         @endcan
-                            @can ('users.index')
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('users.index') }}">Estudiantes</a>
-                                </li>
-                            @endcan
-                            @can ('roles.index')
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
-                                </li>
-                            @endcan
+                        @can ('users.index')
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('users.index') }}">Estudiantes</a>
+                        </li>
+                        @endcan
+                        @can('teachers.index')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('teachers.index') }}">Maestros</a>
+                        </li>
+                        @endcan
+                        @can ('roles.index')
+                        <li class="nav-item">
+                             <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
+                        </li>
+                        @endcan
                     </ul>
 
                     <!-- Right Side Of Navbar -->

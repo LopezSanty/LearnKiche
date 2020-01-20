@@ -82,5 +82,32 @@ class PermissionsTableSeeder extends Seeder
             'slug' => 'bimestrecuatro.bimcuatro',
             'description' => 'Ver toda la informacion de bimestre cuatro'
         ]);
+
+        // Permiso maestro
+        Permission::create ([
+            'name' => 'Navegar Maestros',
+            'slug' => 'teachers.index',
+            'description' => 'Lista y navega todos los maestros registrados en el sistema'
+        ]);
+        Permission::create ([
+            'name' => 'Ver detalle del maestro',
+            'slug' => 'teachers.show',
+            'description' => 'ver en detalle cada maestro del sistema'
+        ]);
+        Permission::create ([
+            'name' => 'Creacion de maestro',
+            'slug' => 'teachers.create',
+            'description' => 'Crear cualquier dato de maestro en el sistema'
+        ]);
+        Permission::create ([
+            'name' => 'Edicion de maestro',
+            'slug' => 'teachers.edit',
+            'description' => 'Editar cualquier dato un rol del sistema'
+        ]);
+        Permission::create ([
+            'name' => 'Eliminar maestro',
+            'slug' => 'teachers.destroy',
+            'description' => 'Eliminar cualquier maestro del sistema'
+        ]);
     }
 }

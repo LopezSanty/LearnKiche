@@ -20,6 +20,12 @@ class UserTableSeeder extends Seeder
             'password' => Hash::make('admin123')
         ]);
 
+        User::create([
+            'name' => 'Mario Poz',
+            'username' => 'Mario',
+            'password' => Hash::make('admin123')
+        ]);
+
         Role::create([
             'name' => 'Admin' ,
             'slug' => 'admin' ,
