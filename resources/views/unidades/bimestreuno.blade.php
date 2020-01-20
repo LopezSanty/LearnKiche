@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    Bimestre uno
+    <gallery-component></gallery-component>
 @endsection
