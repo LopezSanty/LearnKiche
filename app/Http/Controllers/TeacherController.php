@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Teacher;
+use Caffeinated\Shinobi\Models\Role;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -60,6 +61,7 @@ class TeacherController extends Controller
      */
     public function edit(Teacher $teacher)
     {
+
         return view('teachers.edit', compact('teacher'));
     }
 
@@ -86,6 +88,7 @@ class TeacherController extends Controller
     public function destroy(Teacher $teacher)
     {
         $teacher->delete();
+
         return back()->with('info', 'Maestro eliminado correctamente');
     }
 }

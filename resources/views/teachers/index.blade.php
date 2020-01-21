@@ -47,7 +47,12 @@
                                     </td>
                                     <td>
                                         @can('teachers.destroy')
-                                            <a href="{{ route('teachers.destroy', $teacher->id) }}"></a>
+                                            {!! Form::open([ 'route' => ['teachers.destroy', $teacher->id],
+                                             'method'=>'DELETE']) !!}
+                                            <button class="btn btn-outline-danger btn-sm" >
+                                                Eliminar
+                                            </button>
+                                            {!! Form::close() !!}
                                         @endcan
                                     </td>
                                 </tr>

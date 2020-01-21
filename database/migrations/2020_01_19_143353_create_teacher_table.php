@@ -18,7 +18,7 @@ class CreateTeacherTable extends Migration
             $table->string('nombre', 70);
             $table->string('apellido', 70);
             $table->string('grado', 20);
-            $table->date('fecha-nacimiento');
+            $table->date('fecha_nacimiento');
             $table->string('direccion');
             $table->string('telefono',10);
             $table->timestamps();
