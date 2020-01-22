@@ -44,7 +44,7 @@
                         @endcan
                         @can('bimestredos.bimdos')
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('bimestredos.bimdos') }}">II Bimestres</a>
+                            <a class="nav-link" href="{{ route('bimestredos.bimdos') }}">II Bimestre</a>
                         </li>
                         @endcan
                         @can('bimestretres.bimtres')
